@@ -1,0 +1,49 @@
+Assignment 2 - Results Summary
+
+Dataset Used:
+- zomato.csv
+
+Original Dataset Shape:
+- Rows: 123657
+- Columns: 12
+
+Final Preprocessed Dataset Shape:
+- Rows: 101530
+- Columns: 12 before encoding and scaling
+- Final processed output shape: 101530 rows x 40 columns
+
+Missing Value Handling:
+- rating missing values filled: 32236 using median
+- delivery_rating missing values filled: 1280 using median
+- best_seller missing values filled: 95715 using "Unknown"
+
+Duplicate Handling:
+- Duplicate rows removed: 22127
+
+Outlier Treatment:
+- Outliers were detected using the IQR method
+- Outliers were treated using capping instead of deleting rows
+- Number of capped values:
+  - rating: 9565
+  - delivery_rating: 1291
+  - dining_votes: 8376
+  - delivery_votes: 23513
+  - votes: 13766
+  - cost: 4621
+
+Encoding Applied:
+- One-Hot Encoding on city
+- Label Encoding on best_seller
+- Ordinal Encoding on price_category
+- Frequency Encoding on cuisine and place_name
+- Target Encoding on restaurant_name using rating
+
+Scaling Applied:
+- Min-Max Scaling on rating, votes, cost
+- Max Absolute Scaling on rating, votes, cost
+- Normalization on rating, votes, cost
+- Standardization on rating, votes, cost
+
+Final Output Files:
+- zomato_processed.csv
+- results_summary.txt
