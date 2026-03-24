@@ -1,0 +1,25 @@
+Assignment 4 - Spam Email Detection using SVM
+
+Dataset rows after cleaning: 5158
+Ham messages: 4516
+Spam messages: 642
+
+Model Evaluation
+Accuracy: 0.9864
+Precision: 0.9914
+Recall: 0.8984
+F1 Score: 0.9426
+
+Confusion Matrix
+[[903   1]
+ [ 13 115]]
+
+Classification Report
+              precision    recall  f1-score   support
+
+         ham       0.99      1.00      0.99       904
+        spam       0.99      0.90      0.94       128
+
+    accuracy                           0.99      1032
+   macro avg       0.99      0.95      0.97      1032
+weighted avg       0.99      0.99      0.99      1032
